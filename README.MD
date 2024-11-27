@@ -22,7 +22,7 @@ openssl s_client -connect <host>:<port> -starttls mysql: Start TLS MySQL session
 openssl s_client -connect <host>:<port> -starttls postgres: Start TLS PostgreSQL session
 openssl s_client -connect <host>:<port> -starttls ldaps: Start TLS LDAPS session
 
-Gobuster and Dirbuster Cheat Sheet
+Gobuster and Dirbuster
 
 Gobuster:
 Gobuster is a command-line tool used for brute-forcing directories, files, and DNS subdomains on web servers.
