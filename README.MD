@@ -1,4 +1,5 @@
 # Made By Taylor Christian Newsome
+```
 # Netcat
 nc -l -p <port>: Listen on a port
 nc <host> <port>: Connect to a host on a port
@@ -338,3 +339,4 @@ Netdiscover: A network discovery tool to find devices in a local network.
 Ettercap: Network sniffer and MITM tool for ARP spoofing, DNS spoofing, and sniffing traffic.
 Wireshark: Network protocol analyzer to inspect and capture IP packets.
 Proxychains: Tool for routing traffic through proxies to evade detection. 
+```
