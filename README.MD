@@ -22,6 +22,55 @@ openssl s_client -connect <host>:<port> -starttls mysql: Start TLS MySQL session
 openssl s_client -connect <host>:<port> -starttls postgres: Start TLS PostgreSQL session
 openssl s_client -connect <host>:<port> -starttls ldaps: Start TLS LDAPS session
 
+Gobuster and Dirbuster Cheat Sheet
+
+Gobuster:
+Gobuster is a command-line tool used for brute-forcing directories, files, and DNS subdomains on web servers.
+
+Common Gobuster Syntax:
+gobuster <mode> -u <URL> -w <wordlist> [options]
+
+Modes:
+
+dir: Directory and file brute-forcing
+dns: DNS subdomain brute-forcing
+vhost: Virtual host brute-forcing
+Examples for Gobuster:
+
+Directory and File Discovery:
+gobuster dir -u http://example.com -w /path/to/wordlist.txt
+
+DNS Subdomain Brute-forcing:
+gobuster dns -d example.com -w /path/to/subdomains.txt
+
+Virtual Host Brute-forcing:
+gobuster vhost -u http://example.com -w /path/to/vhosts.txt
+
+Useful Options:
+
+-t <threads>: Number of threads (default 10).
+-o <output.txt>: Write results to a file.
+-x <extensions>: Append file extensions (e.g., .php,.html).
+-r: Prevent redirects.
+-k: Ignore SSL certificate errors.
+Dirbuster:
+Dirbuster is a graphical tool designed for brute-forcing web server directories and files. It uses a wordlist-based approach.
+
+Steps to Use Dirbuster:
+
+Open Dirbuster.
+Enter the target URL (e.g., http://example.com).
+Select a wordlist:
+Example: /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+Set the file extensions to search (e.g., .php,.html,.txt).
+Configure number of threads (default 10, increase for faster scans).
+Start the scan.
+Dirbuster Tips:
+
+Use recursive mode to scan subdirectories.
+Choose the right wordlist size for your target to balance speed and thoroughness.
+Save results to a file for analysis.
+
 # SQL Injection (sqlmap)
 sqlmap -u "<url>" --dbs: Enumerate databases
 sqlmap -u "<url>" -D <db> --tables: Enumerate tables in database
